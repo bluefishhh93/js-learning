@@ -1,0 +1,56 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript for Everyone:DOM</title>
+  </head>
+  <body>
+    <script>
+        onload = run
+        const h2 = document.querySelectorAll('h2')[1];
+        const options = { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+        const displayTime = document.querySelectorAll('h2')[1];
+        async function run(){
+            while(true){
+                document.getElementById('year').style.color = hexaColor();
+                const h2 = document.querySelectorAll('h2')[1];
+                h2.innerHTML = new Date().toLocaleString('en-US', options);
+                h2.style.backgroundColor = hexaColor();
+
+                await sleep(1000);
+            }
+        }
+
+        function sleep(ms) {
+         return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        
+
+        const hexaColor = () => {
+        const str = '0123456789abcdef'
+        let hexa = '#'
+        let index
+        for (let i = 0; i < 6; i++) {
+         index = Math.floor(Math.random() * str.length)
+            hexa += str[index]
+        }
+        return hexa
+        }
+    </script>
+    <div class="wrapper">
+        <h1>Asabeneh Yetayeh challenges in <span id="year">2020</span></h1>
+        <h2>30DaysOfJavaScript Challenge</h2>
+        <h2></h2>
+        <ul>
+            <li>30DaysOfPython Challenge Done</li>
+            <li>30DaysOfJavaScript Challenge Ongoing</li>
+            <li>30DaysOfReact Challenge Coming</li>
+            <li>30DaysOfFullStack Challenge Coming</li>
+            <li>30DaysOfDataAnalysis Challenge Coming</li>
+            <li>30DaysOfReactNative Challenge Coming</li>
+            <li>30DaysOfMachineLearning Challenge Coming</li>
+        </ul>
+    </div>
+  </body>
+</html>

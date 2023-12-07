@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Object Model:30 Days Of JavaScript</title>
+  </head>
+
+  <body>
+    <h1> Press any keyboard</h1>
+    <div style="width: 40px; height: 40px; border: solid red; "></div>
+    <script>
+      document.body.addEventListener('keypress', e => {
+        document.querySelector('h1').textContent = 'you press' + e.key
+        document.querySelector('div').textContent = 'you press' + e.keyCode
+      })
+    </script>
+  </body>
+</html>

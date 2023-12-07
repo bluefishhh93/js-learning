@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <script>
+       onload = function() {
+        const allTitles = document.getElementsByTagName('h1');
+        console.log(allTitles)
+        console.log(allTitles.length)
+
+
+        for (let i = 0; i < allTitles.length; i++) {
+        console.log(allTitles[i]) // prints each elements in the HTMLCollection
+        }
+        
+        let firstTitle1 = document.querySelector('h1');   //select the first title available h1 element
+        let firstTitle2 = document.querySelector('#first-title'); //select id with first-title
+        let firstTitle3 = document.querySelector('.title');  //select the first available element with class element
+
+
+        const allTitles2 = document.querySelectorAll('h1')
+
+        console.log(allTitles2.length)
+        allTitles2.forEach(title => console.log(title))
+
+
+        const titles = document.querySelectorAll('h1')
+        titles[3].setAttribute('class', 'title')
+        titles[3].id = 'fourth-title' //thay vi cach dung setAttribute
+        titles[3].innerHTML = 'cac'
+
+        console.log(titles.length)
+
+        titles[3].classList.add('title','head-title')
+        //khong vi title da co roi nen no chi them 
+        //head--title
+        titles[3].classList.remove('head-title')
+}
+
+
+    </script>
+     <h1 class='title' id='first-title'>First Title</h1>
+     <h1 class='title' id='second-title'>Second Title</h1>
+     <h1 class='title' id='third-title'>Third Title</h1>
+     <h1></h1>
+</body>
+</html>

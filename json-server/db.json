@@ -1,0 +1,24 @@
+{
+  "courses": [
+    {
+      "name": "java",
+      "description": "khóa học lập trình java",
+      "id": 1
+    },
+    {
+      "name": "c++",
+      "description": "khóa học cơ bản",
+      "id": 2
+    },
+    {
+      "name": "html và csss",
+      "description": "khóa học lập trình giao diện",
+      "id": 3
+    },
+    {
+      "name": "cssgoo",
+      "description": "game",
+      "id": 4
+    }
+  ]
+}
